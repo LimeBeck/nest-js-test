@@ -1,0 +1,12 @@
+version: '2.3'
+services: 
+  service-a:
+    build: 
+      context: service-a
+      dockerfile: Dockerfile
+    ports: 
+      - '5001:5000'
+  service-b:
+    build: 
+      context: service-b
+      dockerfile: Dockerfile

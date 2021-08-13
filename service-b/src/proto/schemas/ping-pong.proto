@@ -1,0 +1,14 @@
+syntax = "proto3";
+package ping_pong;
+import "google/protobuf/timestamp.proto";
+
+service PingPong {
+  rpc ping(Ping) returns (Pong) {};
+}
+
+message Ping { string id = 1; };
+
+message Pong {
+  string id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+};
